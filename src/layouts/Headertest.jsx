@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../component/Button";
 
 const navMenudata = [
-  { title: "HOME", link: "#" },
+  { title: "HOME's Loc", link: "#" },
   { title: "MYSTERY BOX", link: "#" },
   { title: "HOW CAN I CLAIM ?", link: "#" },
   { title: "ABOUT US", link: "#" },
