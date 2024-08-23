@@ -1,0 +1,443 @@
+html,
+body {
+  @apply bg-bgColor text-white font-font1;
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+.wrapper {
+  max-width: 1180px;
+  width: 100%;
+  margin-inline: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+//// buttonClaim
+.btnClaim {
+  box-shadow: 3px 4px 18px 0px #1564ad;
+  background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+  display: inline-block;
+  cursor: pointer;
+
+  padding: 11px 26px;
+  text-shadow: 0px 1px 0px #528ecc;
+}
+.btnClaim:hover {
+  background: linear-gradient(to bottom, #111dff 5%, #79bbff 100%);
+  background-color: #ff9100;
+}
+.btnClaim:active {
+  position: relative;
+  top: 1px;
+}
+
+//////Circle
+
+/* Shared styles for the circle */
+.circle-stroke {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgb(19, 2, 85); /* Viền trắng */
+  background: none; /* Xóa background */
+  animation: pulse_3011 6s infinite;
+}
+
+.circle-stroke-1 {
+  width: 600px;
+  height: 600px;
+}
+
+.circle-stroke-2 {
+  width: 800px;
+  height: 800px;
+}
+
+@keyframes pulse_3011 {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+//// item move -> Circle
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes box {
+  0% {
+    box-shadow: #27272c;
+  }
+  50% {
+    box-shadow: 0 0 25px var(--clr);
+  }
+  100% {
+    box-shadow: #27272c;
+  }
+}
+///Button Header
+
+/* CSS */
+.btnhover {
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-size: 12px;
+
+  height: 50px;
+  justify-content: center;
+  letter-spacing: 1px;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform, opacity;
+  z-index: 0;
+}
+
+.btnhover:hover {
+  /* Màu nền khi hover */
+  /* Tăng độ đậm của viền khi hover */
+  box-shadow: 0 0 1px #7b7be5; /* Tăng hiệu ứnglow khi hover */
+}
+
+.btnhover:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
+    0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.btnhover:focus {
+  outline: none;
+  border: 2px solid #063e99;
+}
+
+// ButtonClaim
+.btnClaim {
+  background: linear-gradient(
+    105deg,
+    rgba(130, 223, 227, 1) 1%,
+    rgba(35, 50, 129, 1) 90%
+  );
+  text-decoration: none;
+  font-size: large;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.btnClaim:hover {
+  background-color: #12027b;
+  box-shadow: none;
+}
+
+.btnClaim:hover svg {
+  stroke-width: 3px;
+  stroke-dashoffset: -500;
+}
+
+.btnClaim:active {
+  transform: scale(1.001);
+  background-color: #02a7d4;
+}
+
+/* CSS */
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  border: 0;
+  box-shadow: rgba(130, 106, 230, 0.5) 0 1px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 48px;
+  justify-content: center;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: center; /* Thay đổi thành center để văn bản nằm giữa */
+  text-decoration: none;
+  transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  position: relative; /* Cần để sử dụng pseudo-elements */
+}
+
+/* Hiệu ứng hover */
+.button-29:hover::after {
+  content: ""; /* Tạo một phần tử giả */
+  position: absolute; /* Đặt phần tử giả lên toàn bộ phần tử button */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 167, 212, 0.3); /* Màu nền với độ mờ 30% */
+  backdrop-filter: blur(5000px); /* Làm mờ nền phía dưới */
+  z-index: 1; /* Đảm bảo phần tử giả nằm trên nền nhưng dưới nội dung */
+  pointer-events: none; /* Đảm bảo phần tử giả không chặn các sự kiện chuột */
+}
+
+/* Đảm bảo nội dung button hiển thị trên hiệu ứng */
+.button-29:hover {
+  color: #ffffff; /* Thay đổi màu chữ khi hover nếu cần */
+  z-index: 2; /* Đảm bảo nội dung button nằm trên hiệu ứng */
+}
+
+/////Button Footer
+// ButtonClaim
+.btnFooter {
+  text-justify: center;
+  background: linear-gradient(
+    151deg,
+    rgba(130, 223, 227, 1) 0%,
+    rgba(52, 9, 229, 1) 100%
+  );
+  border: 2px solid rgba(52, 9, 229, 0.6); /* Viền xanh nhạt với độ trong suốt */
+  border-radius: 12px; /* Thiết lập border radius */
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  box-shadow: 0 0 8px rgba(52, 9, 229, 0.5); /* Hiệu ứng glow nhẹ */
+  transition: all 0.3s ease-in-out; /* Thêm hiệu ứng chuyển đổi mượt mà */
+}
+
+.btnFooter:hover {
+  background-color: #04b7e9; /* Màu nền khi hover */
+  border-color: #3409e5; /* Tăng độ đậm của viền khi hover */
+  box-shadow: 0 0 20px #3409e5; /* Tăng hiệu ứnglow khi hover */
+}
+
+.btnFooter:hover svg {
+  stroke-width: 3px;
+  stroke-dashoffset: -500;
+}
+////Button Refund
+.btnRefund {
+  width: 120px;
+  height: 50px;
+  text-justify: center;
+  background: linear-gradient(
+    176deg,
+    rgba(52, 9, 229, 1) -2%,
+    rgba(35, 50, 129, 1) 10%,
+    rgba(3, 1, 30, 1) 77%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.6); /* Viền xanh nhạt với độ trong suốt */
+  border-radius: 12px; /* Thiết lập border radius */
+  text-decoration: none;
+  font-size: large;
+  text-transform: uppercase;
+  position: relative;
+  box-shadow: 0 0 8px rgba(155, 155, 155, 0.5); /* Hiệu ứng glow nhẹ */
+  transition: all 0.3s ease-in-out; /* Thêm hiệu ứng chuyển đổi mượt mà */
+}
+
+.btnRefund:hover svg {
+  stroke-width: 3px;
+  stroke-dashoffset: -500;
+}
+
+// /* Chart
+
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  height: 150px;
+  margin: 50px;
+  background-image: url("backgroundchart.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.chart-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+////////////////////////
+///
+///
+///
+.refund-button {
+  background-image: url("refundbutton.svg");
+  width: 150px; /* hoặc kích thước của bạn */
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  color: white; /* Màu chữ bên trong button */
+  border: none; /* Xóa border mặc định của button */
+  padding: 10px 20px; /* Điều chỉnh padding tùy thích */
+  font-size: 20px; /* Điều chỉnh kích thước chữ */
+  text-align: center; /* Căn giữa chữ */
+  cursor: pointer; /* Hiển thị con trỏ chuột khi hover */
+}
+
+.refund-button:hover {
+  opacity: 0.9; /* Thay đổi opacity khi hover */
+}
+
+.headerbackground {
+  background-image: url("headerbackground.svg");
+  width: 1920px; /* hoặc kích thước của bạn */
+  height: 90px;
+  background-size: cover;
+  background-position: center;
+  color: white; /* Màu chữ bên trong button */
+  /* Xóa border mặc định của button */
+  /* Điều chỉnh padding tùy thích */ /* Điều chỉnh kích thước chữ */
+  /* Căn giữa chữ */
+  cursor: pointer; /* Hiển thị con trỏ chuột khi hover */
+}
+
+//////BUTTON CHUNG
+///
+///
+/* Đặt hiệu ứng mặc định cho phần tử */
+.btnchung {
+  text-transform: uppercase;
+  position: relative;
+  box-shadow: 0 0 0 rgba(52, 9, 229, 0.5); /* Cần để sử dụng pseudo-elements */
+  /* Thay đổi màu nền và làm mờ mờ nhạt từ từ */
+}
+
+/* Hiệu ứng hover */
+.btnchung:hover::before {
+  content: ""; /* Tạo một phần tử giả */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  /* Màu trắng với độ mờ 30% */
+  backdrop-filter: blur(90%); /* Làm mờ nền phía dưới */
+  z-index: 1; /* Đảm bảo phần tử giả nằm trên nền nhưng dưới nội dung */
+}
+
+.btnchung:hover {
+  color: #ffffff; /* Thay đổi màu chữ khi hover nếu cần */
+}
+
+/* Tạo lớp đường thẳng đứng với gradient nền */
+// .vertical-line ********** {
+//   @apply w-1  relative;
+//   background-image: linear-gradient(
+//     105deg,
+//     rgba(130, 223, 227, 1) 0%,
+//     rgba(35, 50, 129, 1) 100%
+//   );
+//   animation: slide-down 1s ease-out forwards;
+// }
+/* Hiệu ứng chữ xuất hiện từ ngoài vào trong */
+@keyframes text-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-effect {
+  animation: text-slide-in 1s ease-out forwards;
+}
+
+/* Hiệu ứng cho đường thẳng đứng (vertical-line) */
+@keyframes slide-down {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 50px; /* Chiều cao mong muốn */
+  }
+}
+
+.vertical-line {
+  @apply w-1 relative;
+  background-image: linear-gradient(
+    105deg,
+    rgba(130, 223, 227, 1) 0%,
+    rgba(35, 50, 129, 1) 100%
+  );
+  animation: slide-down 1s ease-out forwards;
+}
+
+/* Hiệu ứng cho đường phân cách chính với gradient */
+@keyframes gradient-slide {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 150px; /* Chiều rộng mong muốn */
+  }
+}
+
+.separator-gradient {
+  @apply h-2 rounded-full bg-headerColor relative;
+  background-image: linear-gradient(to right, #5adaff, #5468ff);
+  animation: gradient-slide 1s ease-out forwards;
+}
+
+/* Hiệu ứng cho đường phân cách nền */
+@keyframes separator-background-slide {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 250px; /* Chiều rộng mong muốn */
+  }
+}
+
+.separator-background {
+  @apply h-2 rounded-full bg-gray-500 absolute;
+  animation: separator-background-slide 1s ease-out forwards;
+}
